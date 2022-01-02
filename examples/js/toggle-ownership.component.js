@@ -56,7 +56,7 @@ AFRAME.registerComponent('toggle-ownership', {
     }
 
     if(NAF.utils.takeOwnership(this.el)) {
-      this.el.setAttribute('toggle-ownership', { direction: this.data.direction * -1 });
+      // this.el.setAttribute('toggle-ownership', { direction: this.data.direction * -1 });
       this.updateColor();
     }
   },
@@ -76,13 +76,13 @@ AFRAME.registerComponent('toggle-ownership', {
       return;
     }
 
-    this.el.object3D.rotateY(this.data.speed * this.data.direction);
+    // this.el.object3D.rotateY(this.data.speed * this.data.direction);
 
-    const rotation = this.el.object3D.rotation;
-    this.el.setAttribute('rotation', {
-      x: THREE.Math.radToDeg(rotation.x),
-      y: THREE.Math.radToDeg(rotation.y),
-      z: THREE.Math.radToDeg(rotation.z),
-    });
+    // const rotation = this.el.object3D.rotation;
+    // this.el.setAttribute('rotation', {
+    //   x: THREE.Math.radToDeg(rotation.x),
+    //   y: THREE.Math.radToDeg(rotation.y),
+    //   z: THREE.Math.radToDeg(rotation.z),
+    // });
   }
 });
